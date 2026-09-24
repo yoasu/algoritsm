@@ -1,6 +1,6 @@
 ### IntelliJ IDEA ###
 .idea/
-*.xml
+*.iml
 
 out/
 !**/src/main/**/out/
