@@ -23,15 +23,15 @@ public class MergeSort implements Sorting<Integer>{
             merge(nums, start, mid, end);
         }
 
-        private void merge(List<Integer> nums, int start, int middle, int end) {
+        private void merge(List<Integer> nums, int start, int mid, int end) {
 
 
             List<Integer> s = new ArrayList<>();
 
             int leftV = start;
-            int rightV = middle + 1;
+            int rightV = mid + 1;
 
-            while (leftV <= middle && rightV <= end) {
+            while (leftV <= mid && rightV <= end) {
 
                 // ищем меньший элемент
                 if (nums.get(leftV) <= nums.get(rightV)) {
@@ -44,7 +44,7 @@ public class MergeSort implements Sorting<Integer>{
             }
 
             // левая часть
-            while (leftV<= middle) {
+            while (leftV<= mid) {
                 s.add(nums.get(leftV));
                 leftV++;
             }
