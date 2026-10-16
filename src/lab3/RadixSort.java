@@ -22,7 +22,13 @@ public class RadixSort implements Sorting<BigInteger> {
             for (BigInteger num : nums) {
                 String s = num.toString();
                 int index = s.length() - pos - 1;
-                int digit = index >= 0 ? s.charAt(index) - '0' : 0;
+                int digit;
+
+                if (index >= 0) {
+                    digit = s.charAt(index) - '0';
+                } else {
+                    digit = 0;
+                }
                 count[digit]++;
             }
 
@@ -35,7 +41,13 @@ public class RadixSort implements Sorting<BigInteger> {
             for (int i = nums.size() - 1; i >= 0; i--) {
                 String s = nums.get(i).toString();
                 int index = s.length() - pos - 1;
-                int digit = index >= 0 ? s.charAt(index) - '0' : 0;
+                int digit;
+
+                if (index >= 0) {
+                    digit = s.charAt(index) - '0';
+                } else {
+                    digit = 0;
+                }
 
                 result[--count[digit]] = nums.get(i);
             }
