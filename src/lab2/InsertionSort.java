@@ -9,6 +9,7 @@ public class InsertionSort implements Sorting<Integer> {
             int  s = nums.get(i);
             int j;
 
+
             for (j = i - 1; j >= 0; j--) {
                 int left = nums.get(j);
                 if (s < left) {
